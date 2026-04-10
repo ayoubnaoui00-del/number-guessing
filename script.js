@@ -17,5 +17,11 @@ function checkGuess () {
     if(userGuess === randomNumber) {
         lastResult.textContent ='congratulations! you got it right!'
          lastResult.style.backgroundColor= 'green'
+         lowOrHigh.textContent = '';
+         setGameOver()
+    } else if(guessCount === 5) {
+        lastResult.textContent = '!!! GAME OVER!!!';
+        lowOrHigh.textContent = '';
+        setGameOver();  
     }
 }
